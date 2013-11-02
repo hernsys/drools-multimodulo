@@ -1,0 +1,4 @@
+drools-multimodulo
+==================
+
+Learning Drools
