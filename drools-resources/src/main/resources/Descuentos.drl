@@ -1,0 +1,30 @@
+#created on: 05/06/2013
+package com.hernsys.rules
+
+import com.hernsys.*
+
+#list any import classes here.
+
+
+
+#declare any global variables here
+
+
+
+
+rule "Gastos superior a 1.000 euros"
+    when
+        cliente : Cliente( gasto > 1000 );
+    then
+        System.out.println("El cliente "  + cliente.getNombre() + " ha gastado más de 1.000 euros.");
+  		cliente.setDescuento(cliente.getDescuento() + cliente.getGasto()*5/100);
+
+end
+
+rule "Cliente registrado"
+ 	when
+	  cliente : Cliente( registrado == true )
+ 	then 
+  	  System.out.println("El cliente "  + cliente.getNombre() + " está registrado.");
+      cliente.setDescuento(cliente.getDescuento() + cliente.getGasto()*5/100);
+end

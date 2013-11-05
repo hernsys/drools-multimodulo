@@ -9,4 +9,12 @@
   <modules>
     <module>drools-resources</module>
   </modules>
+
+   <properties>
+        <!--project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding-->        
+        <drools.version>5.0.1</drools.version>
+	<junit.version>4.8.1</junit.version>
+   </properties>
+
+
 </project>
