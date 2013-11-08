@@ -12,19 +12,19 @@ import com.hernsys.*
 
 
 
-rule "Gastos superior a 1.000 euros"
+rule "expense greater than 1000"
     when
-        cliente : Cliente( gasto > 1000 );
+        customer : Customer( expense > 1000 );
     then
-        System.out.println("El cliente "  + cliente.getNombre() + " ha gastado más de 1.000 euros.");
-  		cliente.setDescuento(cliente.getDescuento() + cliente.getGasto()*5/100);
+        System.out.println("The customer "  + customer.getName() + " has spent greater than 1.000 euros.");
+  		customer.setDiscount(customer.getDiscount() + customer.getExpense()*5/100);
 
 end
 
-rule "Cliente registrado"
+rule "Customer registered"
  	when
-	  cliente : Cliente( registrado == true )
+	  customer : Customer( registered == true )
  	then 
-  	  System.out.println("El cliente "  + cliente.getNombre() + " está registrado.");
-      cliente.setDescuento(cliente.getDescuento() + cliente.getGasto()*5/100);
+  	  System.out.println("The customer "  + customer.getName() + " is registered.");
+      customer.setDiscount(customer.getDiscount() + customer.getExpense()*5/100);
 end
