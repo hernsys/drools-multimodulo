@@ -1,0 +1,2 @@
+serviceClass: com.hernsys.client.GreetingService
+path: 9FFFB298ABF03F872BA2AB1E88EADC21.gwt.rpc
