@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+				http://cxf.apache.org/jaxrs
+				http://cxf.apache.org/schemas/jaxrs.xsd
+        		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	
+	<!--SOA Service -->
+	<bean id="project.webservice" class="com.hernsys.servicesImpl.Step4SoaServiceImpl">
+	</bean>
+
+	<jaxws:endpoint id="project.webservice.endpoint"
+		implementor="#project.webservice" address="/project" />
+
+
+
+	<!--REST Service-->
+	<jaxrs:server id="projectWebServiceRest" address="/projectRest">
+		<jaxrs:serviceBeans>
+			<ref bean="step4.service" />
+		</jaxrs:serviceBeans>
+	</jaxrs:server>
+
+	<bean id="step4.service" class="com.hernsys.servicesImpl.Step4RestServiceImpl" />
+	
+
+</beans>

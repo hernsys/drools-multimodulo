@@ -1,0 +1,3 @@
+** run this module with this command:
+
+mvn jetty:run -Dmaven.jetty.port=8081
