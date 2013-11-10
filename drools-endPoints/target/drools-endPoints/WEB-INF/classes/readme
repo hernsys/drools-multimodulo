@@ -1,3 +1,0 @@
-** run this module with this command:
-
-mvn jetty:run -Djetty.port=8081
