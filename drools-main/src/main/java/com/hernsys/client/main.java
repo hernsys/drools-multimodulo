@@ -40,6 +40,7 @@ public class main implements EntryPoint {
    * This is the entry point method.
    */
   public void onModuleLoad() {
+	exercise1();
     final Button sendButton = new Button( messages.sendButton() );
     final TextBox nameField = new TextBox();
     nameField.setText( messages.nameField() );
@@ -50,12 +51,12 @@ public class main implements EntryPoint {
 
     // Add the nameField and sendButton to the RootPanel
     // Use RootPanel.get() to get the entire body element
-    RootPanel.get("nameFieldContainer").add(nameField);
+    //RootPanel.get("nameFieldContainer").add(nameField);
     RootPanel.get("sendButtonContainer").add(sendButton);
     RootPanel.get("errorLabelContainer").add(errorLabel);
 
     // Focus the cursor on the name field when the app loads
-    nameField.setFocus(true);
+    //nameField.setFocus(true);
     nameField.selectAll();
 
     // Create the popup dialog box
@@ -146,4 +147,20 @@ public class main implements EntryPoint {
     sendButton.addClickHandler(handler);
     nameField.addKeyUpHandler(handler);
   }
+  
+  
+  private void exercise1(){
+	  final Label label1 = new Label("first example");
+	  final Label resolution = new Label("this is the resolution");
+	  final Button resolutionButton = new Button( "Resolution"/*messages.sendButton()*/ );
+	  
+	  RootPanel.get("nameFieldContainer").add(label1);
+	  RootPanel.get("nameFieldContainer").add(resolution);
+	  resolutionButton.addStyleName("sendButton");
+
+	  
+	  
+  }
+  
+  
 }
