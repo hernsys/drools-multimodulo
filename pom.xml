@@ -20,8 +20,18 @@
 	<junit.version>4.8.1</junit.version>
 	<spring.version>3.1.1.RELEASE</spring.version>
 	<cxf.version>2.7.3</cxf.version>
-	<junit.version>4.8.1</junit.version>
-	<gwtVersion>2.5.1</gwtVersion>
+	<junit.version>4.10</junit.version>
+
+    	<maven.compiler.source>1.6</maven.compiler.source>
+	<maven.compiler.target>1.6</maven.compiler.target>
+	<errai.version>2.4.0.Beta1</errai.version>
+	<gwt.version>2.4.0</gwt.version>
+	<weld.version>1.1.6.Final</weld.version>
+	<gwt.maven.version>2.4.0</gwt.maven.version>
+	<mvel.version>2.1.Beta8</mvel.version>
+	<jetty.version>6.1.25</jetty.version>
+	<slf4j.version>1.6.1</slf4j.version>
+	<uel.impl.version>2.1.2-b04</uel.impl.version>
    </properties>
 
 

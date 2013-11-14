@@ -15,13 +15,15 @@
   </modules>
 
    <properties>
-        <!--project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding-->        
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <drools.version>5.0.1</drools.version>
 	<junit.version>4.8.1</junit.version>
 	<spring.version>3.1.1.RELEASE</spring.version>
 	<cxf.version>2.7.3</cxf.version>
-	<junit.version>4.8.1</junit.version>
-	<gwtVersion>2.5.1</gwtVersion>
+	<junit.version>4.10</junit.version>
+	<!--gwt.version>2.5.1</gwt.version-->
+	<gwt.version>2.4.0</gwt.version>
+
    </properties>
 
 
