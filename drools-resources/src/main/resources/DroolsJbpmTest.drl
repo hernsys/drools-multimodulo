@@ -1,0 +1,35 @@
+#created on: 05/06/2013
+package com.hernsys.rules
+
+#list any import classes here.
+
+import com.hernsys.*
+
+
+
+#declare any global variables here
+
+dialect "mvel"
+
+
+//is called from Drools Test
+rule "person greater than 29"
+    when
+        $per : Person( age > 29 );
+    then
+        System.out.println($per.getName() + " has " + $per.getAge + " years old");
+  		$per.setStatus(8);
+
+end
+
+
+//Only is called from jbpm
+rule "RuleGroup - person greater than 29"
+ruleflow-group "rule-flow-group-hernsys1"
+    when
+        $per : Person( age > 29 );
+    then
+        System.out.println($per.getName() + " has " + $per.getAge + " years old");
+  		$per.setStatus(8);
+
+end

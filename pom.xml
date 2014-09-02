@@ -21,6 +21,7 @@
 	<spring.version>3.1.1.RELEASE</spring.version>
 	<cxf.version>2.7.3</cxf.version>
 	<junit.version>4.10</junit.version>
+	<jbpm.version>5.5.0.Final</jbpm.version>
 
     	<maven.compiler.source>1.6</maven.compiler.source>
 	<maven.compiler.target>1.6</maven.compiler.target>
@@ -32,7 +33,31 @@
 	<jetty.version>6.1.25</jetty.version>
 	<slf4j.version>1.6.1</slf4j.version>
 	<uel.impl.version>2.1.2-b04</uel.impl.version>
+	
+	<kie.version>6.0.1.Final</kie.version>
+
+
    </properties>
 
+	<repositories>
+        	<repository>
+	            <id>jboss-public-repository-group</id>
+        	    <name>JBoss Public Repository Group</name>
+	            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+        	    <layout>default</layout>
+	            <releases>
+        	        <enabled>true</enabled>
+        	        <updatePolicy>never</updatePolicy>
+	            </releases>
+        	    <snapshots>
+        	        <enabled>true</enabled>
+        	        <updatePolicy>daily</updatePolicy>
+	            </snapshots>
+        	</repository>
+	<repository>
+	<id>sonatype</id>
+	<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+	</repository>
+    </repositories>
 
 </project>

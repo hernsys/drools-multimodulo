@@ -1,16 +1,16 @@
 #created on: 05/06/2013
 package com.hernsys.rules
 
-import com.hernsys.*
-
 #list any import classes here.
+
+import com.hernsys.*
 
 
 
 #declare any global variables here
 
 
-
+dialect "mvel"
 
 rule "expense greater than 1000"
     when
